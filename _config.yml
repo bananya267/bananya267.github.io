@@ -1,0 +1,13 @@
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
+
+title: [Your Name]
+description: Data Product Strategy & Portfolio
+show_downloads: false
+
+# This creates your "Tabs"
+header_pages:
+  - index.md
+  - business-cases.md
+  - about.md
