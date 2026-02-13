@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ananya Bhattacharya | Data Product Strategy</title>
+    <title>Ananya Bhattacharya | Product Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --surface-color: rgba(30, 41, 59, 0.7);
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.2);
-            --border-color: rgba(255, 255, 255, 0.1);
+            --bg-color: #050505;
+            --surface-color: #111111;
+            --surface-hover: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent-color: #10b981; 
+            --accent-glow: rgba(16, 185, 129, 0.15);
+            --border-color: #27272a;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             scroll-behavior: smooth;
         }
 
@@ -31,49 +32,59 @@
             background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.6;
-            background-image: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05), transparent 25%),
-                              radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.05), transparent 25%);
+            background-image: radial-gradient(circle at 50% 0%, #10b98110, transparent 40%);
         }
 
-        /* Glassmorphism Navigation */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 1.5rem 5%;
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(5, 5, 5, 0.8);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
         }
 
-        .logo {
-            font-weight: 800;
-            font-size: 1.2rem;
-            letter-spacing: -0.5px;
-        }
-
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; }
         .logo span { color: var(--accent-color); }
 
         .nav-links a {
-            color: var(--text-primary);
+            color: var(--text-secondary);
             text-decoration: none;
             margin-left: 2rem;
             font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
         }
 
-        .nav-links a:hover { color: var(--accent-color); }
-
         /* Hero Section */
-        header.hero {
-            padding: 12rem 5% 8rem;
-            max-width: 1000px;
-            margin: 0 auto;
+        .hero {
+            padding: 14rem 0 8rem;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
         }
 
         .hero h1 {
@@ -81,106 +92,176 @@
             line-height: 1.1;
             margin-bottom: 1.5rem;
             letter-spacing: -1.5px;
+            font-weight: 800;
         }
-
+        
         .hero h1 span {
-            background: linear-gradient(135deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-secondary);
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 750px;
             margin-bottom: 2.5rem;
             font-weight: 300;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--surface-color);
-            color: var(--text-primary);
-            text-decoration: none;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            font-weight: 600;
-            transition: all 0.3s ease;
+        /* Section Titles */
+        .section-header {
+            margin-bottom: 3.5rem;
         }
-
-        .btn-primary {
-            background: var(--accent-color);
-            color: #000;
-            border: none;
-            box-shadow: 0 4px 15px var(--accent-glow);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--accent-glow);
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-        }
-
-        /* Container & Section Styling */
-        section {
-            padding: 6rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        
         .section-title {
-            font-size: 2rem;
-            margin-bottom: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        section { padding: 6rem 0; }
+
+        /* Case Study Cards (Portfolio Style) */
+        .case-study {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .case-study:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .case-header {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
             gap: 1rem;
         }
 
-        .section-title::after {
-            content: "";
-            height: 1px;
-            background: var(--border-color);
-            flex-grow: 1;
+        .case-title-block h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
         }
 
-        /* Grid Layouts */
-        .grid {
+        .case-role {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case-metrics {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .metric {
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .case-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+
+        .case-section h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .case-section p, .case-section li {
+            color: #d4d4d8;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .case-section ul {
+            padding-left: 1.2rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-tag {
+            background: #1f1f22;
+            color: #a1a1aa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
 
-        /* Cards */
-        .card {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+        .skill-card {
+            background: transparent;
+            border-left: 2px solid var(--border-color);
+            padding-left: 1.5rem;
+            transition: border-color 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .skill-card:hover {
             border-color: var(--accent-color);
         }
 
-        .card-icon {
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
+        .skill-card h3 {
+            font-size: 1.2rem;
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .card p {
+        .skill-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
@@ -188,18 +269,20 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 3rem 5%;
+            padding: 4rem 5%;
             border-top: 1px solid var(--border-color);
             color: var(--text-secondary);
             font-size: 0.9rem;
-            margin-top: 4rem;
         }
 
-        /* Responsive */
+        @media (max-width: 900px) {
+            .case-content { grid-template-columns: 1fr; gap: 1.5rem; }
+            .hero h1 { font-size: 3rem; }
+        }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Could add a hamburger menu here later */
-            .btn-group { flex-direction: column; }
+            .nav-links { display: none; }
+            .case-header { flex-direction: column; }
+            .case-metrics { width: 100%; justify-content: flex-start; }
         }
     </style>
 </head>
@@ -208,89 +291,249 @@
     <nav>
         <div class="logo">Ananya<span>.</span></div>
         <div class="nav-links">
-            <a href="#home">Home</a>
+            <a href="#portfolio">Products & Cases</a>
             <a href="#expertise">Expertise</a>
-            <a href="#business-cases">Business Cases</a>
-            <a href="#about">About</a>
+            <a href="mailto:ananyabhattacharya312@gmail.com">Contact</a>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <h1>Translating complex data into <span>strategic product value.</span></h1>
-        <p>I am a Data Product Strategist specializing in building scalable data ecosystems, driving cross-functional alignment, and delivering measurable business outcomes through analytics and AI integration.</p>
-        <div class="btn-group">
-            <a href="#business-cases" class="btn btn-primary">View Business Cases</a>
-            <a href="mailto:contact@example.com" class="btn">Get in Touch</a>
-        </div>
-    </header>
+    <div class="container">
+        <header class="hero">
+            <div class="hero-badge">Technical Product Manager | MLOps</div>
+            <h1>Bridging Data Science & Engineering.<br><span>Driving $180M+ in Product Value.</span></h1>
+            <p>With 3+ years in AI/ML Product Management and 5+ years in Big Data Engineering, I build scalable data ecosystems, operationalize GenAI, and deliver measurable business outcomes.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <a href="#portfolio" style="background: var(--text-primary); color: #000; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">View Portfolio</a>
+                <a href="https://linkedin.com/" target="_blank" style="background: var(--surface-color); color: var(--text-primary); border: 1px solid var(--border-color); padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;"><i data-feather="linkedin" style="width: 18px; height: 18px;"></i> LinkedIn</a>
+            </div>
+        </header>
 
-    <section id="expertise">
-        <h2 class="section-title">Core Competencies</h2>
-        <div class="grid">
-            <div class="card">
-                <i data-feather="database" class="card-icon"></i>
-                <h3>Data Monetization</h3>
-                <p>Transforming raw organizational data into customer-facing products and internal tools that directly impact the bottom line.</p>
+        <section id="portfolio">
+            <div class="section-header">
+                <h2 class="section-title">Product Case Studies</h2>
+                <p class="section-subtitle">A selection of platforms, engines, and AI workflows engineered for scale.</p>
             </div>
-            <div class="card">
-                <i data-feather="target" class="card-icon"></i>
-                <h3>Product Strategy & Roadmap</h3>
-                <p>Defining north-star metrics, managing the product lifecycle from ideation to launch, and aligning technical execution with business goals.</p>
-            </div>
-            <div class="card">
-                <i data-feather="users" class="card-icon"></i>
-                <h3>Cross-Functional Leadership</h3>
-                <p>Bridging the gap between engineering, data science, design, and executive stakeholders to ensure cohesive product delivery.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="business-cases">
-        <h2 class="section-title">Featured Business Cases</h2>
-        <div class="grid">
-            <div class="card">
-                <i data-feather="bar-chart-2" class="card-icon"></i>
-                <h3>Predictive Customer Churn Engine</h3>
-                <p><strong>The Challenge:</strong> High attrition rates lacking predictive visibility.</p>
-                <p><strong>The Solution:</strong> Spearheaded the development of an ML-driven dashboard integrating historical user behavioral data.</p>
-                <p><strong>Outcome:</strong> Increased retention interventions by 40% and improved forecasting accuracy.</p>
+            <div class="case-study" style="border-color: var(--accent-color); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.05);">
+                <div class="case-header">
+                    <div class="case-title-block">
+                        <div class="case-role">Capstone & Independent Architecture</div>
+                        <h3>Real-Time AI Customer 360 Platform</h3>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Latency Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">20%</span>
+                            <span class="metric-label">Faster Sales Action</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>The Challenge</h4>
+                        <p>B2B sales and retention teams struggled with delayed insights and generic outreach, leading to missed opportunities to prevent client churn. Existing workflows lacked real-time predictive capabilities and automated, personalized intervention.</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>Product Solution & Execution</h4>
+                        <ul>
+                            <li><strong>Agentic AI Workflow:</strong> Architected a real-time lakehouse and LLM orchestration workflow specifically designed to predict B2B churn.</li>
+                            <li><strong>Automated Intervention:</strong> Deployed GenAI (RAG) pipelines that automatically draft contextual retention emails based on predictive triggers.</li>
+                            <li><strong>Enterprise Security:</strong> Implemented dynamic masking within the architecture to ensure strict PII compliance during live model inference.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">LLM Orchestration</span>
+                            <span class="tech-tag">RAG Pipelines</span>
+                            <span class="tech-tag">Real-time Lakehouse</span>
+                            <span class="tech-tag">Data Security</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <i data-feather="git-merge" class="card-icon"></i>
-                <h3>Unified Data Platform Integration</h3>
-                <p><strong>The Challenge:</strong> Siloed data pipelines causing reporting delays.</p>
-                <p><strong>The Solution:</strong> Led the product strategy for a centralized data lake, negotiating requirements across 5 distinct business units.</p>
-                <p><strong>Outcome:</strong> Reduced time-to-insight from 72 hours to near real-time.</p>
-            </div>
-            <div class="card">
-                <i data-feather="activity" class="card-icon"></i>
-                <h3>Automated Executive Analytics</h3>
-                <p><strong>The Challenge:</strong> Manual, error-prone weekly reporting.</p>
-                <p><strong>The Solution:</strong> Designed an automated analytics suite using modern BI tools tailored to C-suite KPIs.</p>
-                <p><strong>Outcome:</strong> Saved 20+ hours weekly of analyst time and improved strategic decision-making speed.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="card" style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <p>With a foundation in data analytics and a passion for product management, I thrive at the intersection of business strategy and technical execution. I believe that data is only as valuable as the decisions it enables.</p>
-            <p>My approach is rooted in user-centric design, agile methodologies, and relentless prioritization. Whether I am roadmapping a new AI-driven feature or untangling complex legacy data architecture, my goal remains the same: building products that solve real problems.</p>
-            <div style="margin-top: 1rem;">
-                <a href="#" style="color: var(--accent-color); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                    <i data-feather="linkedin"></i> Connect on LinkedIn
-                </a>
+            <div class="case-study">
+                <div class="case-header">
+                    <div class="case-title-block">
+                        <div class="case-role">BoldVoice • Data Product Strategy Analysis</div>
+                        <h3>The "Authenticity" Data Moat</h3>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">B2B</span>
+                            <span class="metric-label">Data Infrastructure</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">Net-New</span>
+                            <span class="metric-label">Data Asset Class</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>The Strategic Challenge</h4>
+                        <p>The Generative AI landscape faces a crisis of "Stylistic Homogenization," outputting text and voice that is grammatically perfect but fundamentally robotic. While BoldVoice successfully gamified the American accent, their data was bounded by scripted prosody—capturing how people <em>perform</em>, not how they <em>converse</em>. The industry lacked a dataset combining precision with spontaneous cognitive flow.</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>Data Strategy & Architecture</h4>
+                        <ul>
+                            <li><strong>Proprietary Data Moat Identification:</strong> Formulated a strategy to extend the product's capture mechanism from "Scripted Practice" to "Natural Conversation," identifying a massive latent data asset for LLM training.</li>
+                            <li><strong>Dual-Pipeline Architecture:</strong> Conceptualized a data architecture separating standard deterministic correction (Clarity Scoring) from conversational ingestion (Authenticity Capture), tracking identity retention alongside accuracy.</li>
+                            <li><strong>B2B Commercialization:</strong> Positioned the resulting "Authenticity Dataset" as a high-value infrastructure layer for Foundation Model providers (OpenAI, Google) to solve the algorithmic "tone problem."</li>
+                            <li><strong>User-Centric Product Value:</strong> Anchored the strategy in "Identity Preservation," ensuring end-users can leverage AI for polished Executive Presence without sacrificing their unique human phrasing and personality.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Generative AI</span>
+                            <span class="tech-tag">Data Moat Strategy</span>
+                            <span class="tech-tag">LLM Infrastructure</span>
+                            <span class="tech-tag">Data Architecture</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+
+            <div class="case-study">
+                <div class="case-header">
+                    <div class="case-title-block">
+                        <div class="case-role">TD Bank • Wealth Pricing</div>
+                        <h3>Algorithmic Pricing Engine</h3>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">$180M</span>
+                            <span class="metric-label">Target Revenue Uplift</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">800+</span>
+                            <span class="metric-label">Advisors Served</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>The Challenge</h4>
+                        <p>Wealth advisors lacked a data-driven framework for pricing, relying on manual intuition. Concurrently, deal-intelligence data required extensive manual preparation, slowing down market responsiveness.</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>Product Solution & Execution</h4>
+                        <ul>
+                            <li><strong>Data-Driven Roadmapping:</strong> Defined the strategic roadmap for an algorithmic pricing engine by synthesizing insights from 20+ direct user interviews.</li>
+                            <li><strong>Growth Platform:</strong> Directed the product strategy for a deal-intelligence platform supporting $10B in portfolio growth.</li>
+                            <li><strong>Data Quality & Automation:</strong> Engineered data quality SLAs for Salesforce integrations and launched automation features that reduced data preparation time by 10%.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">A/B Testing</span>
+                            <span class="tech-tag">GTM Strategy</span>
+                            <span class="tech-tag">Salesforce Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-header">
+                    <div class="case-title-block">
+                        <div class="case-role">Comscore • Data Platforms</div>
+                        <h3>Privacy-by-Design Big Data Platform</h3>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">10TB+</span>
+                            <span class="metric-label">Real-Time Analytics</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">$20M+</span>
+                            <span class="metric-label">Risk Mitigated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>The Challenge</h4>
+                        <p>Scaling a massive ingestion pipeline for $10M+ ARR analytics products while strictly adhering to complex, evolving data privacy regulations (GDPR/CCPA) without sacrificing processing speed.</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>Product Solution & Execution</h4>
+                        <ul>
+                            <li><strong>Regulatory Architecture:</strong> Architected a privacy-by-design framework, engineering technical guardrails directly within the ingestion layer to automate PII masking and maintain auditability.</li>
+                            <li><strong>Performance Optimization:</strong> Redesigned ingestion pipelines to drastically reduce latency, which directly drove a 40% increase in user platform adoption.</li>
+                            <li><strong>Lifecycle Management:</strong> Led asynchronous engineering teams to build foundational data structures, owning the roadmap from concept to deployment.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">GDPR/CCPA</span>
+                            <span class="tech-tag">Big Data Engineering</span>
+                            <span class="tech-tag">Data Ingestion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-header">
+                    <div class="case-title-block">
+                        <div class="case-role">Cove Neuroscience & Taproot</div>
+                        <h3>ML Infrastructure & Commercialization</h3>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">$1M</span>
+                            <span class="metric-label">Funding Qualified</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">30%</span>
+                            <span class="metric-label">Training Time Reduction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>The Challenge</h4>
+                        <p>Transitioning academic or legacy AI/ML models into viable, scalable commercial products while optimizing the underlying infrastructure costs and ensuring data governance.</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>Product Solution & Execution</h4>
+                        <ul>
+                            <li><strong>Commercial Roadmap (Cove):</strong> Converted purely service-based AI models into a scalable commercial product suite, supporting graduation from the CDL'24 accelerator.</li>
+                            <li><strong>FinOps & Infrastructure:</strong> Executed a comprehensive buy-vs-build analysis, successfully saving capital by pivoting to off-the-shelf solutions.</li>
+                            <li><strong>Modernization (Taproot):</strong> Spearheaded the ML roadmap to modernize legacy systems, prioritizing governance protocols that cut model training time by 30%.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MLOps</span>
+                            <span class="tech-tag">FinOps</span>
+                            <span class="tech-tag">Buy-vs-Build Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <div class="section-header">
+                <h2 class="section-title">Core Expertise</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i data-feather="layers" style="color: var(--accent-color);"></i> Product Strategy</h3>
+                    <p>GTM Strategy, Roadmapping, Backlog Prioritization, Data-as-a-Product, AI Governance (Bias/Fairness), Buy-vs-Build Analysis.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i data-feather="cpu" style="color: var(--accent-color);"></i> Technical PM & MLOps</h3>
+                    <p>Model Lifecycle (Dev-to-Prod), MLOps Strategy, API Design, Data Contracts, RAG Architectures, Inference Cost Optimization, GDPR Compliance.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i data-feather="database" style="color: var(--accent-color);"></i> Technical Stack</h3>
+                    <p>Python (Snowpark/Pandas), SQL, Snowflake, AWS (SageMaker/Glue), LLM Orchestration, Databricks, Spark, Scala, dbt.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Ananya Bhattacharya. All rights reserved.</p>
+        <p>&copy; 2026 Ananya Bhattacharya. Technical Product Manager & Data Strategist.</p>
     </footer>
 
     <script>
-        // Initialize Feather Icons for sleek vector graphics
         feather.replace();
     </script>
 </body>
