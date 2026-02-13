@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananya Bhattacharya | Data Product Strategy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.2);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05), transparent 25%),
+                              radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.05), transparent 25%);
+        }
+
+        /* Glassmorphism Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--accent-color); }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* Hero Section */
+        header.hero {
+            padding: 12rem 5% 8rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--surface-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: #000;
+            border: none;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--accent-glow);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Container & Section Styling */
+        section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title::after {
+            content: "";
+            height: 1px;
+            background: var(--border-color);
+            flex-grow: 1;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .card-icon {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Could add a hamburger menu here later */
+            .btn-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Ananya<span>.</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#business-cases">Business Cases</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <h1>Translating complex data into <span>strategic product value.</span></h1>
+        <p>I am a Data Product Strategist specializing in building scalable data ecosystems, driving cross-functional alignment, and delivering measurable business outcomes through analytics and AI integration.</p>
+        <div class="btn-group">
+            <a href="#business-cases" class="btn btn-primary">View Business Cases</a>
+            <a href="mailto:contact@example.com" class="btn">Get in Touch</a>
+        </div>
+    </header>
+
+    <section id="expertise">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="grid">
+            <div class="card">
+                <i data-feather="database" class="card-icon"></i>
+                <h3>Data Monetization</h3>
+                <p>Transforming raw organizational data into customer-facing products and internal tools that directly impact the bottom line.</p>
+            </div>
+            <div class="card">
+                <i data-feather="target" class="card-icon"></i>
+                <h3>Product Strategy & Roadmap</h3>
+                <p>Defining north-star metrics, managing the product lifecycle from ideation to launch, and aligning technical execution with business goals.</p>
+            </div>
+            <div class="card">
+                <i data-feather="users" class="card-icon"></i>
+                <h3>Cross-Functional Leadership</h3>
+                <p>Bridging the gap between engineering, data science, design, and executive stakeholders to ensure cohesive product delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="business-cases">
+        <h2 class="section-title">Featured Business Cases</h2>
+        <div class="grid">
+            <div class="card">
+                <i data-feather="bar-chart-2" class="card-icon"></i>
+                <h3>Predictive Customer Churn Engine</h3>
+                <p><strong>The Challenge:</strong> High attrition rates lacking predictive visibility.</p>
+                <p><strong>The Solution:</strong> Spearheaded the development of an ML-driven dashboard integrating historical user behavioral data.</p>
+                <p><strong>Outcome:</strong> Increased retention interventions by 40% and improved forecasting accuracy.</p>
+            </div>
+            <div class="card">
+                <i data-feather="git-merge" class="card-icon"></i>
+                <h3>Unified Data Platform Integration</h3>
+                <p><strong>The Challenge:</strong> Siloed data pipelines causing reporting delays.</p>
+                <p><strong>The Solution:</strong> Led the product strategy for a centralized data lake, negotiating requirements across 5 distinct business units.</p>
+                <p><strong>Outcome:</strong> Reduced time-to-insight from 72 hours to near real-time.</p>
+            </div>
+            <div class="card">
+                <i data-feather="activity" class="card-icon"></i>
+                <h3>Automated Executive Analytics</h3>
+                <p><strong>The Challenge:</strong> Manual, error-prone weekly reporting.</p>
+                <p><strong>The Solution:</strong> Designed an automated analytics suite using modern BI tools tailored to C-suite KPIs.</p>
+                <p><strong>Outcome:</strong> Saved 20+ hours weekly of analyst time and improved strategic decision-making speed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <p>With a foundation in data analytics and a passion for product management, I thrive at the intersection of business strategy and technical execution. I believe that data is only as valuable as the decisions it enables.</p>
+            <p>My approach is rooted in user-centric design, agile methodologies, and relentless prioritization. Whether I am roadmapping a new AI-driven feature or untangling complex legacy data architecture, my goal remains the same: building products that solve real problems.</p>
+            <div style="margin-top: 1rem;">
+                <a href="#" style="color: var(--accent-color); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-feather="linkedin"></i> Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ananya Bhattacharya. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons for sleek vector graphics
+        feather.replace();
+    </script>
+</body>
+</html>
